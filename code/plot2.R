@@ -8,5 +8,5 @@ epc$DateTime <- as.POSIXlt(paste(epc$Date, epc$Time), format='%d/%m/%Y %H:%M:%S'
 epc$Global_active_power <- suppressWarnings(as.numeric(as.character(epc$Global_active_power)))
 
 png(filename='plots/plot2.png', width=480, height=480)
-with(epc, plot(DateTime, Global_active_power, type='l'))
+with(epc, plot(DateTime, Global_active_power, type='l', xlab='', ylab='Glibal Active Power (kilowatts)'))
 dev.off()
